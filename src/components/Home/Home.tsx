@@ -1,16 +1,15 @@
+import WeatherInfo from '../WeatherInfo/WeatherInfo'
 import './Home.scss'
 
 
-const Home = () => {
 
-navigator.geolocation.getCurrentPosition((position) => {
-        console.log(position)
-    })
+const Home = () => {
 
 
     return (
         <div className="home">
             <h1 className='home__title'>Home</h1>
+            <WeatherInfo />
         </div>
     )
 }
