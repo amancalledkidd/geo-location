@@ -12,7 +12,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     border: $clr-widget-border;
-    border-radius: 10px;
+    border-radius: $clr-widget-border-radius;
     max-width: 300px;
     height: auto;
 
