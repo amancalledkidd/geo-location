@@ -11,8 +11,8 @@ const TodoList = ({todos}: TodoListProps) => {
 
     return (
         <div className="todo-list">
-            {todos.map((todo, index) => {
-                return (<TodoItem key={index} todo={todo} />)
+            {todos.map((todo) => {
+                return (<TodoItem key={todo.id} todo={todo} />)
             })}
         </div>
     )

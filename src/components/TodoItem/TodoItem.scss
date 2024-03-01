@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: $clr-widget-border;
+    border-radius: $clr-widget-border-radius;
+    box-shadow: inset 0 0 10px rgba(228, 234, 241, 0.5);
+}
