@@ -3,23 +3,14 @@ import { GeoLocation } from '../../types/GeoLocation'
 import { WeatherApiResponse } from '../../types/WeatherApiResponse'
 import './WeatherInfo.scss'
 
-const WeatherInfo = () => {
-    
-    const [location, setLocation] = useState<GeoLocation>()
+type WeatherInfoProps = {
+    location: GeoLocation | undefined;
+}
+
+const WeatherInfo = ({location}: WeatherInfoProps) => {
     const [weather, setWeather] = useState<WeatherApiResponse>()
     
-    useEffect(() => {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-            setLocation({
-                latitude: position.coords.latitude,
-                longitude: position.coords.longitude
-            })
-        })
-        } else {
-            console.log('Geolocation is not supported by this browser.')
-        }
-    }, [])
+    
 
     useEffect(() => {
         if (location) {
