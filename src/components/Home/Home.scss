@@ -1,0 +1,32 @@
+@import "../../styles/variables.scss";
+
+.home {
+    background:linear-gradient(45deg,#e9841e, #225acc);
+    min-height: 100vh;
+    height: 100%;
+    padding: 10px;
+
+    &__greeting {
+        font-size: 2rem;
+        padding: 20px;
+        font-weight: 600;
+        color: rgb(231, 240, 245);
+        text-align: center;
+    }
+
+    &__top-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    &__bottom-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+}
