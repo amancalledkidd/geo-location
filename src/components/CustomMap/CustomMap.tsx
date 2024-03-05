@@ -9,8 +9,11 @@ type MapProps = {
 
 
 const CustomMap = ({location}: MapProps) => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [map, setMap] = useState<google.maps.Map | null> (null);
+
+    if(map) {
+        console.log(map.getCenter()?.toString())
+    }
 
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
