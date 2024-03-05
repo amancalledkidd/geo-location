@@ -9,6 +9,7 @@ type MapProps = {
 
 
 const CustomMap = ({location}: MapProps) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [map, setMap] = useState<google.maps.Map | null> (null);
 
     const { isLoaded } = useJsApiLoader({
@@ -34,6 +35,7 @@ const CustomMap = ({location}: MapProps) => {
         borderRadius: '10px',
         border: '1px solid #f5f5f5ad'
     }
+
 
 
     return isLoaded ? (
