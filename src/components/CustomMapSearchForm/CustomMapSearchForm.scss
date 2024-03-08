@@ -1,0 +1,89 @@
+/* Block: map-search-form */
+.map-search-form {
+    // Add block-level styles here (e.g., margin, padding, display)
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    /* Element: input-container */
+    &__input-container {
+        display: flex;
+        margin-bottom: 15px;
+
+      /* Element: location & destination inputs */
+    &__location,
+    &__destination {
+        flex: 1;
+        padding: 10px;
+        margin-right: 10px; // Add spacing between the inputs
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+        &:last-child {
+          margin-right: 0; // Remove margin for the last input
+        }
+  
+        &::placeholder {
+          color: #999;
+        }
+      }
+    }
+  
+    /* Element: button-container */
+    &__button-container {
+      display: flex;
+      justify-content: space-between;
+  
+      /* Element: search & clear buttons */
+      &__search,
+      &__clear {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #e0e0e0;
+        }
+      }
+  
+      /* Modifier for search button */
+      &__search {
+        background-color: #4CAF50; // Example color
+        color: #fff;
+  
+        &:hover {
+          background-color: #45a049; // Darken on hover
+        }
+      }
+  
+      /* Modifier for clear button */
+      &__clear {
+        background-color: #f44336; // Example color
+        color: #fff;
+  
+        &:hover {
+          background-color: #d32f2f; // Darken on hover
+        }
+      }
+    }
+  
+    /* Element: info */
+    &__info {
+      margin-top: 20px;
+  
+      /* Element: distance & duration */
+      &__distance,
+      &__duration {
+        color: #333;
+        font-size: 16px;
+        margin: 5px 0;
+      }
+    }
+  }
+  
