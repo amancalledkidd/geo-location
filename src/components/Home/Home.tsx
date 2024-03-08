@@ -5,6 +5,9 @@ import Clock from '../Clock/Clock'
 import TodoContainer from '../../container/TodoContainer/TodoContainer'
 import { GeoLocation } from '../../types/GeoLocation'
 import CustomMap from '../CustomMap/CustomMap'
+import QuoteCard from '../QuoteCard/QuoteCard'
+import JournalCard from '../JournalCard/JournalCard'
+
 
 
 
@@ -12,6 +15,7 @@ const Home = () => {
     const [greeting, setGreeting] = useState<string>('')
     const [location, setLocation] = useState<GeoLocation>()
     const user = 'Kumani'
+    const workLocation = {latitude: 51.5074, longitude: 0.1278}
 
 
     useEffect(() => {
@@ -45,13 +49,15 @@ const Home = () => {
             <div className="home__top-row">
                 <Clock />
                 <WeatherInfo location={location}/>
-                <CustomMap location={location}/>
+                <CustomMap location={location} workLocation={workLocation}/>
+            </div>
+            <div className="home__middle-row">
+                <QuoteCard />
+                <JournalCard />
             </div>
             <div className="home__bottom-row">
                 <TodoContainer />
             </div>
-
-            
             
         </div>
     )
