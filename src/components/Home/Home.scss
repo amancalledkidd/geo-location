@@ -1,10 +1,18 @@
 @import "../../styles/variables.scss";
 
+body { 
+    background: linear-gradient(45deg, #e9841e, #225acc);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
 .home {
-    background:linear-gradient(45deg,#e9841e, #225acc);
     min-height: 100vh;
     height: 100%;
     padding: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
 
     &__greeting {
         font-size: 2rem;
@@ -14,27 +22,37 @@
         text-align: center;
     }
 
-    &__top-row {
+    &__top-row, &__middle-row, &__bottom-row {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
+        align-items: stretch; // Ensure items stretch to fill the container height
+
+        > div { // Assuming each component is wrapped in a <div>
+            flex-grow: 1; // Allows the component to grow to fill the space
+            min-width: calc(33.333% - 20px); // Sets a minimum width for 3 items per row, accounting for the gap
+            max-width: calc(50% - 20px); // Optional: Sets a maximum width to ensure not too stretched if fewer items
+        }
     }
 
-    &__bottom-row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-    &__middle-row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
+
+    @media (max-width: 600px) {
+        &__greeting {
+            font-size: 1.5rem; // Smaller font size for smaller screens
+            padding: 15px; // Adjust padding for smaller screens
+        }
+
+        &__top-row, &__middle-row, &__bottom-row {
+            flex-direction: column; // Stack elements vertically on smaller screens
+            gap: 15px; // Reduce the gap for a more compact layout
+
+            > div {
+                min-width: 100%; // Components take full width on smaller screens
+                max-width: 100%; // Prevents components from exceeding the container width
+            }
+        }
     }
 
 }

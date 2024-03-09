@@ -49,16 +49,15 @@ const Home = () => {
             <div className="home__top-row">
                 <Clock />
                 <WeatherInfo location={location}/>
-                <CustomMap location={location} workLocation={workLocation}/>
+                <JournalCard />
             </div>
             <div className="home__middle-row">
                 <QuoteCard />
-                <JournalCard />
+                <CustomMap location={location} workLocation={workLocation}/>
             </div>
             <div className="home__bottom-row">
                 <TodoContainer />
             </div>
-            
         </div>
     )
 }

@@ -12,7 +12,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     border: $clr-widget-border;
-    max-width: 300px;
+    width: 300px;
     height: 300px;
     
     &__entry {
@@ -28,4 +28,18 @@
         font-weight: 600;
         margin: 10px;
     }
+
+    &__submit, &__edit{
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin: 2px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f4f4f4;
+        }
+    }
+
+
 }
